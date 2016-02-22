@@ -2,6 +2,7 @@
   "name": "myIS",
   "app_id": "",
   "gulpStartupTasks": [
+    "babel",
     "sass",
     "watch"
   ],
