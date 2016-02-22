@@ -1,0 +1,10 @@
+<ion-view view-title="Browse">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="headline in hlCtrl.headlines">
+        <h1>{{headline.title}}</h1>
+        <p>{{headline.content}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

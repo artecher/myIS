@@ -1,0 +1,21 @@
+<ion-view view-title="Headlines">
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="hlCtrl.doRefresh()"></ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="headline in hlCtrl.headlines" class="item-thumbnail-left"">
+        <img ng-src="{{::headline.thumbnail}}">
+        <h2>{{::headline.title}}</h2>
+        <div ng-bind-html="::headline.content"></div>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll
+      ng-if="hlCtrl.isMoreData()"
+      icon="ion-loading-c"
+      on-infinite="hlCtrl.loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
+
+  </ion-content>
+
+</ion-view>
