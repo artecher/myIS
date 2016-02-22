@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('starter').controller('HeadlineCtrl', function ($http, $scope, $q, $timeout) {
+angular.module('myIs').controller('HeadlineCtrl', function ($http, $scope, $q, $timeout) {
 
   var that = this;
 
