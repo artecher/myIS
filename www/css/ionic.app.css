@@ -9730,3 +9730,29 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.headline-container {
+  background-size: cover;
+  background-position: center; }
+  .headline-container .headline-overview {
+    height: 200px;
+    color: white;
+    position: relative; }
+    .headline-container .headline-overview .title {
+      font-size: 1.3rem;
+      position: absolute;
+      margin-top: 100px;
+      white-space: normal;
+      line-height: 130%;
+      color: white; }
+    .headline-container .headline-overview .bottom-info {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+      .headline-container .headline-overview .bottom-info .status, .headline-container .headline-overview .bottom-info .category {
+        font-size: .9rem;
+        font-weight: 300; }
+      .headline-container .headline-overview .bottom-info .status span {
+        margin-left: 10px; }
+      .headline-container .headline-overview .bottom-info .category {
+        text-align: right; }

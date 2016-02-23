@@ -1,6 +1,6 @@
 angular.module('myIs')
 
-.controller('HeadlineCtrl', function($http, $scope, $q, $timeout){
+.controller('HeadlinesCtrl', function($http, $scope, $q, $timeout, $state){
 
   var that = this;
 
@@ -542,5 +542,6 @@ angular.module('myIs')
       $scope.$broadcast('scroll.infiniteScrollComplete');
     })
   }
+
 });
 

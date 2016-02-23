@@ -1,0 +1,36 @@
+<ion-view view-title="Headlines">
+  <ion-content>
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="hlCtrl.doRefresh()"></ion-refresher>
+    <ion-list>
+      <ion-item
+        ng-repeat="headline in hlCtrl.headlines"
+        class="headline-container"
+        ng-style="{backgroundImage: 'url({{headline.thumbnail_images.full.url}})'}"
+      >
+        <div class="content headline-overview" ui-sref="headline({headline: headline})">
+          <p class="title">{{headline.title}}</p>
+
+          <div class="row bottom-info">
+            <div class="col status">
+              <span class="icon ion-clock"> momentjs</span>
+              <span class="icon ion-ios-heart-outline"> {{headline.like_count}}</span>
+              <span class="icon ion-ios-chatboxes-outline"> {{headline.comment_count}}</span>
+            </div>
+            <div class="col category">
+              {{headline.categories[0].title}}
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll
+      ng-if="hlCtrl.isMoreData()"
+      icon="ion-loading-c"
+      on-infinite="hlCtrl.loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
+
+  </ion-content>
+
+</ion-view>

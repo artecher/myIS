@@ -1,0 +1,39 @@
+.headline-container {
+  background-size: cover;
+  background-position: center;
+
+  .headline-overview {
+    height: 200px;
+    color: white;
+    position: relative;
+
+    .title {
+      font-size: 1.3rem;
+      position: absolute;
+      margin-top: 100px;
+      white-space: normal;
+      line-height: 130%;
+      color: white;
+    }
+
+    .bottom-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .status, .category {
+        font-size: .9rem;
+        font-weight: 300;
+      }
+
+      .status span {
+        margin-left: 10px;
+      }
+
+      .category {
+        text-align: right;
+      }
+    }
+  }
+
+}
+
